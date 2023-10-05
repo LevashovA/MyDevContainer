@@ -3,10 +3,10 @@
 {
 	"name": "custom Default Linux Universal",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
-	//"build" : {
-	//	"dockerfile": "Dockerfile"
-	//},
+	//"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+	"build" : {
+		"dockerfile": "Dockerfile"
+	},
 	"features": {
 		"ghcr.io/devcontainers/features/azure-cli:1": {
 			"installUsingPython": true,
