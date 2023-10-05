@@ -1,10 +1,12 @@
 import os
 
 # Adjust input_directory_path to change directory
-global_input_directory_path = 'C:/NIH-Cogen/WINCC-tool/To Process'
+global_input_directory_path = './Input'
 
 # Create output directory within global_input_directory_path
-OutputDirectory = global_input_directory_path + "/Output"
+OutputDirectory = "./Output"
+#global_input_directory_path + "./Output"
+
 
 #Global Varibales
 global_as2_value = ""
@@ -16,7 +18,7 @@ def Read_TRS_PressField(Input_file_path, Output_file_path):
     pressfield_data = []
     inside_pressfield = False
 
-    with open(Input_file_path, 'r') as file:
+    with open(Input_file_path, 'r', encoding="cp1251") as file:
         for line in file:
             if '[pressfield]' in line:
                 inside_pressfield = True
